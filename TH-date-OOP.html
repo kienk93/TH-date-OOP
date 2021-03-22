@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fs</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+</body>
+<script>
+ let MyDate = function(day,month,year) {
+   this.day = day;
+   this.month = month;
+   this.year = year;
+   this.getDay = function() {
+     return this.day;
+   }
+   this.getMonth = function() {
+     return this.month;
+   }
+   this.getYear = function() {
+     return this.year;
+   }
+   this.setDay = function () {
+     this.day = day;
+   }
+   this.setMonth = function () {
+     this.month = month;
+   }
+   this.setYear = function () {
+     this.year = year;
+   }
+   this.setDate = function(day,month,year) {
+     this.day = day;
+     this.month = month;
+     this.year = year;
+   }
+ }
+ let dateBorn = new MyDate(1,6,1993)
+ let day = dateBorn.getDay(1)
+ let month = dateBorn.getMonth(6)
+ let year = dateBorn.getYear(1993)
+ alert(day + '/' + month + '/' + year)
+dateBorn.setDay = 10;
+ dateBorn.setMonth = 10;
+ dateBorn.setYear = 2019;
+ let day1 = dateBorn.setDay;
+ let month1 = dateBorn.setMonth;
+ let year1 = dateBorn.setYear;
+ alert(day1 + '/' + month1 + '/' + year1)
+ dateBorn.setDate(1,6,1999)
+ dateBorn.toString()
+ let date1 =  dateBorn.setDate(1,6,1999)
+ date1.toString()
+ document.write( date1.toString())
+
+</script>
+</html>
